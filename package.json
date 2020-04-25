@@ -1,0 +1,19 @@
+{
+  "name": "task_manager-app",
+  "version": "1.0.0",
+  "description": "\"Its a to do app that manages all our daily tasks\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "\"To-Do\""
+  ],
+  "author": "Sejal Gupta",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.2",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.10"
+  }
+}
