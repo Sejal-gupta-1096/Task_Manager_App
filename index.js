@@ -3,7 +3,7 @@ const port = 1000;
 const app = express();
 const db = require("./config/mongoose");
 
-
+app.use(express.urlencoded());
 app.use("/" , require("./routes/index"));
 app.use(express.static("./assets"));
 
