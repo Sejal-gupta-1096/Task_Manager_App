@@ -38,9 +38,11 @@
                     <hr>
                     <div id="btn-container">
                         <button type="submit" class="btn btn-success">
-                            <i class="fas fa-plus"></i>Add Tasks</button>
-                        <button type="button" class="btn btn-danger">
-                            <i class="far fa-trash-alt"></i>Delete Tasks</button>
+                            <i class="fas fa-plus"></i>Add Tasks
+                        </button>
+                        <button onclick="addTasksToUrl()" type="button" class="btn btn-danger">
+                            <i class="far fa-trash-alt"></i>
+                            <a id="del-link" >Delete Tasks</a></button>
                     </div>
                    
                 </form>
@@ -49,7 +51,10 @@
                     <% for(var i of task_list){ %>
                         <hr>
                         <li>
-                            <p><%= i.description %></p>
+                            <div id="first-line">
+                                <input id="cb" type="checkbox" name="tasks" value="<%= i._id %>">
+                                <p><%= i.description %></p>
+                            </div>
                             <i class="far fa-calendar-alt"></i> <span><%= i.date %></span>
                             <button type="button" class="btn btn-success btn-small align">
                                 <%= i.category %>

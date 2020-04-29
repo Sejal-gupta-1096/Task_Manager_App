@@ -29,3 +29,13 @@ module.exports.addTasks = function(request , response){
     })
 }
 
+module.exports.deleteTasks = function(request , response){
+    console.log(request.query.tasks)
+    Tasks.findByIdAndDelete(request.query.tasks, function(error){
+        if(error){
+            console.log("Error in deleting contact from db");
+            return;
+        }
+        return response.redirect("back");
+    })
+}
