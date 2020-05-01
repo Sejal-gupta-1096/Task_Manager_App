@@ -4,7 +4,7 @@ module.exports.home = function(request , response){
             console.log("cannot fetch data from db");
             return;
         }
-        console.log(tasks);
+        // console.log(tasks);
         return response.render("home" , {
             task_list : tasks
         });
@@ -24,18 +24,27 @@ module.exports.addTasks = function(request , response){
             console.log("Error in creating a new task in database");
             return;
         }
-        console.log(request.body.description , request.body.category , request.body.date);
+        // console.log(request.body.description , request.body.category , request.body.date);
         return response.redirect("back");
     })
 }
 
 module.exports.deleteTasks = function(request , response){
-    console.log(request.query.tasks)
-    Tasks.findByIdAndDelete(request.query.tasks, function(error){
-        if(error){
-            console.log("Error in deleting contact from db");
-            return;
+        console.log("request",request.body);
+        // Dont' use delete many using findById and delete
+
+        var keysCount = Object.keys(request.body).length;
+        for(let i = 0 ; i < keysCount ; i++){
+            Tasks.findByIdAndDelete(Object.keys(request.body)[i],function(err)
+        {
+            if(err)
+            {
+                console.log("error in deleting the task");
+                return;
+            }
+        });
         }
-        return response.redirect("back");
-    })
+        return response.redirect('/');
+        
+   
 }

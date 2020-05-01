@@ -19,15 +19,13 @@ input{
     border: 0;
 }
 
-#btn-container{
-   display: flex;
-   flex-direction: row;
-   justify-content: center;
+
+
+.edit-btn{
+    width: 90%;
+    margin-left:2rem;
 }
 
-button{
-    margin:1rem;
-}
 
 #other-details{
     display: flex;

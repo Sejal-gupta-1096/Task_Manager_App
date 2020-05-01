@@ -36,23 +36,22 @@
                         </div>
                     </div>
                     <hr>
-                    <div id="btn-container">
-                        <button type="submit" class="btn btn-success">
+                        <button  type="submit" class="edit-btn btn btn-success">
                             <i class="fas fa-plus"></i>Add Tasks
                         </button>
-                        <button onclick="addTasksToUrl()" type="button" class="btn btn-danger">
+                    </form>
+
+                    <form action="/delete-tasks" method="POST">
+                        <button type="submit"  class="edit-btn btn btn-danger">
                             <i class="far fa-trash-alt"></i>
                             <a id="del-link" >Delete Tasks</a></button>
-                    </div>
-                   
-                </form>
 
                 <ul>
-                    <% for(var i of task_list){ %>
+                    <% for(let i of task_list){ %>
                         <hr>
                         <li>
                             <div id="first-line">
-                                <input id="cb" type="checkbox" name="tasks" value="<%= i._id %>">
+                                <input id="cb" type="checkbox" name="<%= i._id %>">
                                 <p><%= i.description %></p>
                             </div>
                             <i class="far fa-calendar-alt"></i> <span><%= i.date %></span>
@@ -62,6 +61,11 @@
                         </li>
                     <% } %>
                 </ul>
+
+                    </form> 
+
+                   
+                                    
             </main>
         </div>
         
