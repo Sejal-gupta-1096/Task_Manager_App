@@ -1,14 +1,18 @@
+// module.exports.home = function(request , response){
+//     Tasks.find({} , function(error , tasks){
+//         if(error){
+//             console.log("cannot fetch data from db");
+//             return;
+//         }
+//         // console.log(tasks);
+//         return response.render("home" , {
+//             task_list : tasks
+//         });
+//     })
+// }
+
 module.exports.home = function(request , response){
-    Tasks.find({} , function(error , tasks){
-        if(error){
-            console.log("cannot fetch data from db");
-            return;
-        }
-        // console.log(tasks);
-        return response.render("home" , {
-            task_list : tasks
-        });
-    })
+    return response.render("home");
 }
 
 const Tasks = require("../models/tasks");
@@ -34,6 +38,7 @@ module.exports.deleteTasks = function(request , response){
         // Dont' use delete many using findById and delete
 
         var keysCount = Object.keys(request.body).length;
+        console.log(keysCount)
         for(let i = 0 ; i < keysCount ; i++){
             Tasks.findByIdAndDelete(Object.keys(request.body)[i],function(err)
         {

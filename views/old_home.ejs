@@ -1,0 +1,83 @@
+<!-- <html>
+    <head>
+        <title>Task Manager App</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+         <link href='https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/ui-lightness/jquery-ui.css'
+          rel='stylesheet'> 
+        <link rel="stylesheet" type="text/css" href="/css/home.css">
+    </head>
+
+    <body>
+        
+        <div class="outer-container">
+            <header>
+                <h1 class="heading jumbotron container-fluid">To Do App</h1>
+            </header>
+            <main>
+                <form action="/add-task" method="POST">
+                    <label for="descr">Description</label>
+                    <input name="description" id="descr" type="text" placeholder="What do you need to do?" required>
+                    <hr>
+                    <div id="other-details">
+                        <div id="category">
+                            <label for="cat">Category</label>
+                            <br>
+                            <select name="category">
+                                <option value="Personal">Personal</option>
+                                <option value="Work">Work</option>
+                                <option value="School">School</option>
+                            </select>
+                        </div>
+                        <div id="date">
+                            <label for="d">Due Date</label>
+                            <input type="text" name="date" id="my_date_picker"> 
+                        </div>
+                    </div>
+                    <hr>
+                        <button  type="submit" class="edit-btn btn btn-success">
+                            <i class="fas fa-plus"></i>Add Tasks
+                        </button>
+                    </form>
+
+                    <form action="/delete-tasks" method="POST">
+                        <button type="submit"  class="edit-btn btn btn-danger">
+                            <i class="far fa-trash-alt"></i>
+                            <a id="del-link" >Delete Tasks</a></button>
+
+                <ul>
+                    <% for(let i of task_list){ %>
+                        <hr>
+                        <li>
+                            <div id="first-line">
+                                <input id="cb" type="checkbox" name="<%= i._id %>">
+                                <p><%= i.description %></p>
+                            </div>
+                            <i class="far fa-calendar-alt"></i> <span><%= i.date %></span>
+                            <button id="cat-btn" type="button" class="btn btn-success btn-small align">
+                                <%= i.category %>
+                            </button>
+                        </li>
+                    <% } %>
+                </ul>
+
+                    </form> 
+
+                   
+                                    
+            </main>
+        </div>
+        
+            
+        
+
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/90f89e9e87.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" > </script> 
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" ></script> 
+        <script src="/javscript/home.js"></script> 
+    </body>
+</html> -->

@@ -1,4 +1,4 @@
-.heading{
+/* .heading{
     text-align: center;
 }
 
@@ -37,14 +37,14 @@ select{
     border: 0;
 }
 #category{
-    width: 50%;
+    width: 50%; */
    /* border: 1px solid black; */
-}
+/* }
 
 #date{
-    width: 50%;
+    width: 50%; */
     /* border: 1px solid black; */
-}
+/* }
 
 ul{
     list-style-type: none;
@@ -67,4 +67,39 @@ i{
 #cb{
     width:1.3rem;
     margin-right: 1rem;
+} */
+
+body{
+    background-image: url("../images/bg-image.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#heading{
+    color: white;
+   text-align: center;
+   margin-top: 2rem;
+   font-size: 4rem;
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   color: rgb(81, 99, 69);
+}
+
+#buttons{
+    position: absolute;
+    left : 50%;
+    top:50%;
+    transform: translate(-50% , -50%);
+    display: flex;
+    flex-direction: column;
+}
+
+.mybtn{
+    margin-bottom: 2rem;
+    width: 20rem;
+    height: 3rem;
+}
+
+#sign-up{
+    background-color: white;
 }
