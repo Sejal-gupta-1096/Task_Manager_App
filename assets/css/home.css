@@ -103,3 +103,12 @@ body{
 #sign-up{
     background-color: white;
 }
+#tm{
+    background-color: #1c8adb;
+}
+#tm a{
+    color: #fff;
+}
+#google{
+    background-color: rgb(224, 45, 45);
+}
