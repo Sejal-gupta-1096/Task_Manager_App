@@ -12,6 +12,9 @@
 // }
 
 module.exports.home = function(request , response){
+    if(request.isAuthenticated()){
+        return response.redirect("back");
+    }
     return response.render("home");
 }
 
