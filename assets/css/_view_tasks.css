@@ -1,0 +1,15 @@
+#views{
+    width: 80%;
+    height: 100%;
+    background-color: rgb(231, 226, 226);
+    border: 1px solid black;
+}
+
+#add-btn{
+    color: rgb(15, 15, 160);
+    font-size: 3rem;
+    position: absolute;
+    top:90%;
+    left:95%;
+    transform: translate(-50% , -50%);
+}

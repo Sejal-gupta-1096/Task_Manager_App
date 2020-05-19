@@ -27,12 +27,6 @@ main{
     flex-wrap: wrap;
 }
 
-#views{
-    width: 80%;
-    height: 100%;
-    background-color: rgb(231, 226, 226);
-    border: 1px solid black;
-}
 
 #details{
     width: 100%;
@@ -71,4 +65,10 @@ main{
 .sub:hover{
     color: #000;
     text-decoration: none;
+}
+
+#name{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #000;
 }

@@ -3,5 +3,6 @@ const passport = require("passport");
 const router = express.Router();
 const tasksController = require("../controllers/tasks_controller");
 
-router.get("/" ,passport.checkAuthentication,tasksController.showTasksPage);
+router.get("/",tasksController.showTasksPage);
+router.get("/add-task",tasksController.addTask);
 module.exports = router;
