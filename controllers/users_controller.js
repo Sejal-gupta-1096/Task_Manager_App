@@ -33,5 +33,5 @@ module.exports.createUser = function(request , response){
 
 module.exports.createSession = function(request , response){
 
-    return response.redirect("/tasks");
+    return response.redirect("/task");
 }

@@ -3,6 +3,21 @@
 
 <div id="views">
 
-    <a id="add-btn" href="/tasks/add-task"><i class="fas fa-plus-circle"></i></a>
+    <!-- <% for(task of user.tasks) { %>
+        <p><%= task.title %></p>
+    <% } %> -->
+    <% for(task of user.tasks) { %>
+    <div class="card custom-card">
+        <div class="card-body">
+          <h3 class="card-title"><%= task.title %></h3>
+          <p class="card-text"><%= task.description %></p>
+          <a href="#" class="card-link">Card link</a>
+          <a href="#" class="card-link">Another link</a>
+          <span class="badge badge-primary"><%= task.category %></span>
+        </div>
+      </div>
+      <% } %>
+
+    <a id="add-btn" href="/task/add-task-form"><i class="fas fa-plus-circle"></i></a>
 
 </div>

@@ -6,7 +6,7 @@ const homeController = require("../controllers/home_controller");
 
 router.get("/" , homeController.home);
 router.use("/users" , require("./users"));
-router.use("/tasks" , passport.checkAuthentication ,require("./tasks"));
+router.use("/task" , passport.checkAuthentication ,require("./task"));
 
 // router.post("/add-task" , homeController.addTasks);
 // router.post("/delete-tasks" , homeController.deleteTasks);
