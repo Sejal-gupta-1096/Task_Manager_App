@@ -46,3 +46,19 @@ module.exports.addTask = async function(request , response){
     }
     
 }
+
+module.exports.deleteTask = async function(request , response){
+
+    let task = await Tasks.findById(request.query.id);
+
+    if(task){
+       task.remove();
+
+       let user =  await Users.findByIdAndUpdate(request.user , { $pull : {tasks : request.query.id}});
+
+    }
+
+    
+
+    return response.redirect("back");
+}

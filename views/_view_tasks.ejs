@@ -11,9 +11,11 @@
         <div class="card-body">
           <h3 class="card-title"><%= task.title %></h3>
           <p class="card-text"><%= task.description %></p>
-          <a href="#" class="card-link">Card link</a>
-          <a href="#" class="card-link">Another link</a>
-          <span class="badge badge-primary"><%= task.category %></span>
+          <div class="custom-card-body">
+          <span class="card-text"><i class="far fa-calendar-alt"></i>&nbsp;<%= task.date %></span>
+          <h3><span class="badge badge-primary"><%= task.category %></span></h3>
+          <a href="/task/delete-task/?id=<%= task._id %>" class="card-link"><div><i class="far fa-trash-alt"></i></div></a>
+        </div>
         </div>
       </div>
       <% } %>
