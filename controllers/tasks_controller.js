@@ -9,14 +9,17 @@ module.exports.showTasksPage = async function(request , response){
 
     console.log(user);
 
-    response.render("tasks" , {
+    response.render("_view_tasks" , {
+        layout: "layoutsA",
         user : user,
     });
 }
 
 module.exports.addTaskForm = async function(request , response){
 
-    return response.render("add-task-form");
+    return response.render("add-task-form" , {
+        layout : "layoutsA"
+    });
 }
 
 module.exports.addTask = async function(request , response){

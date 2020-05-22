@@ -6,7 +6,8 @@ const usersController = require("../controllers/users_controller");
 
 router.get("/sign-up" , usersController.signUp);
 router.get("/sign-in" , usersController.signIn);
-router.get("/log-out" , usersController.logOut);
+router.get("/update-form" ,passport.checkAuthentication,usersController.updateForm);
+router.get("/log-out" , passport.checkAuthentication,usersController.logOut);
 router.post("/create-user" , usersController.createUser);
 router.post("/create-session" ,  
 passport.authenticate('local',

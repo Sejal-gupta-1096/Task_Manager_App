@@ -1,18 +1,21 @@
 
 
-form{
-   position: absolute;
-   width: 80%; 
-   left: 50%;
-   top: 50%;
-   transform: translate(-50%,-50%);
+#form{
+    width: 80%;
+    height: 100%;
 }
-.custom{
+form {
+    position: absolute;
+    left: 25%;
+    top: 20%;
+    width: fit-content;
+}
+.custom-class{
     width: 90%;
     margin: 0.5rem;
     padding-left: 0.7rem;
 }
-.custom:focus {
+.custom-class:focus {
     outline: none !important;
     border:1px solid rgb(15, 15, 160);
     box-shadow: 0 0 10px #719ECE;

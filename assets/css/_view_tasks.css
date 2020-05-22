@@ -2,7 +2,7 @@
     width: 80%;
     height: 100%;
     background-color: rgb(231, 226, 226);
-    border: 1px solid black;
+    /* border: 1px solid black; */
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;

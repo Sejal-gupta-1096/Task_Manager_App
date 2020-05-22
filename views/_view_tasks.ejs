@@ -2,10 +2,6 @@
 <link rel="stylesheet" type="text/css" href="/css/_view_tasks.css">
 
 <div id="views">
-
-    <!-- <% for(task of user.tasks) { %>
-        <p><%= task.title %></p>
-    <% } %> -->
     <% for(task of user.tasks) { %>
     <div class="card custom-card">
         <div class="card-body">
@@ -13,7 +9,17 @@
           <p class="card-text"><%= task.description %></p>
           <div class="custom-card-body">
           <span class="card-text"><i class="far fa-calendar-alt"></i>&nbsp;<%= task.date %></span>
-          <h3><span class="badge badge-primary"><%= task.category %></span></h3>
+
+          <% if(task.category == "Work") { %>
+            <h3><span class="badge" style="background-color: rgb(192, 207, 51);color: #fff;"><%= task.category %></span></h3>
+          <% } %>
+          <% if(task.category == "Personal") { %>
+            <h3><span class="badge badge-info"><%= task.category %></span></h3>
+          <% } %>
+          <% if(task.category == "School") { %>
+            <h3><span class="badge badge-success"><%= task.category %></span></h3>
+          <% } %>
+         
           <a href="/task/delete-task/?id=<%= task._id %>" class="card-link"><div><i class="far fa-trash-alt"></i></div></a>
         </div>
         </div>

@@ -17,6 +17,7 @@ app.use(express.urlencoded());
 app.use(cookieParser());
 
 app.use(expressLayouts);
+app.set('layout', 'layoutsA', 'layoutsB');
 app.set("layout extractStyles" ,true);
 app.set("layout extractScripts" ,true);
 app.use(express.static("./assets"));

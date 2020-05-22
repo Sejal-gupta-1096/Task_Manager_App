@@ -4,14 +4,14 @@ module.exports.signUp = function(request , response){
     if(request.isAuthenticated()){
         return response.redirect("back");
     }
-    return response.render("sign-up");
+    return response.render("sign-up",{layout : "layout"});
 }
 
 module.exports.signIn = function(request , response){
     if(request.isAuthenticated()){
         return response.redirect("back");
     }
-    return response.render("sign-in");
+    return response.render("sign-in" , {layout : "layout"});
 }
 
 module.exports.logOut = function(request , response){
@@ -34,4 +34,12 @@ module.exports.createUser = function(request , response){
 module.exports.createSession = function(request , response){
 
     return response.redirect("/task");
+}
+
+module.exports.updateForm = function(request , response){
+
+    response.render("update-form" , {
+        layout : "layoutsA",
+        user : request.user
+    })
 }

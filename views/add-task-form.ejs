@@ -1,21 +1,25 @@
+
 <link href='https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/ui-lightness/jquery-ui.css'
 rel='stylesheet'>
 <link rel="stylesheet" type="text/css" href="/css/add-task-form.css">
 
+<div id="form">
 
-<form method="POST" action="/task/add-task">
+    <form method="POST" action="/task/add-task">
 
-    <input class="custom height" type="text" name="title" placeholder="Todo Title">
-    <textarea class="custom" name="description"></textarea>
-    <select class="custom height" name="category">
-        <option value="Personal">Personal</option>
-        <option value="Work">Work</option>
-        <option value="School">School</option>
-    </select>
-    <input autocomplete="off" class="custom height" type="text" name="date" id="my_date_picker" placeholder="Date">
-    <input class="add-task-btn" type="submit" value="Add Task">
+        <input class="custom-class height" type="text" name="title" placeholder="Todo Title">
+        <textarea class="custom-class" name="description"></textarea>
+        <select class="custom-class height" name="category">
+            <option value="Personal">Personal</option>
+            <option value="Work">Work</option>
+            <option value="School">School</option>
+        </select>
+        <input autocomplete="off" class="custom-class height" type="text" name="date" id="my_date_picker" placeholder="Date">
+        <input class="add-task-btn" type="submit" value="Add Task">
+    
+    </form>
+</div>
 
-</form>
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" > </script> 

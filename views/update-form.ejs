@@ -1,0 +1,47 @@
+
+<link rel="stylesheet" type="text/css" href="/css/update-form.css">
+<div id="update-form-container">
+
+
+    <form action="/users/update" enctype="multipart/form-data" method="POST">
+
+        <div id="img-upload-container">
+            <h3><%= locals.user.name %></h3>
+            <div id="img-upload-input">
+                <div id="upload">
+                    <h5><i class="fas fa-cloud-upload-alt"></i>&nbsp;UPLOAD PHOTO</h5>
+                </div>
+                 <input type="file" name="avtar">
+            </div>
+        </div>
+
+        <div id="other-details-container">
+            <div class="form-row custom-form-row">
+                <div class="col">
+                  <input type="text" name="name" class="form-control" placeholder="First name" required>
+                </div>
+                <div class="col">
+                  <input type="text" class="form-control" placeholder="Last name">
+                </div>
+              </div>
+              <div class="form-row custom-form-row">
+                <div class="col">
+                  <input type="email" name="email" class="form-control" placeholder="Email" required>
+                </div>
+                <div class="col">
+                  <input type="text" class="form-control" placeholder="Username">
+                </div>
+              </div>
+              <div class="form-row custom-form-row">
+                <div class="col">
+                  <input type="text" class="form-control" placeholder="Country">
+                </div>
+                <div class="col">
+                  <input type="number" class="form-control" placeholder="Number">
+                </div>
+              </div>
+        </div>
+        <button type="submit" class="btn custom-btn">Save Details</button>
+    </form>
+
+</div>
