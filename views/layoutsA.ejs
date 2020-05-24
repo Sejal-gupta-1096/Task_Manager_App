@@ -16,11 +16,13 @@
         <main>
             <div id="dashboard">
                 <div id="details">
-                    <img class="user-img" src="user.jpg">
+                    <div id="img-container">
+                       <img src="<%= user.avtar %>" style="width:90%">
+                    </div>
                     <p id="name"><%= user.name %></p>
                 </div>
                 <div id="options">
-                    <div class="parent"><i class="fas fa-clipboard-list custom"></i><a class="sub" href="">Todo</a></div>
+                    <div class="parent"><i class="fas fa-clipboard-list custom"></i><a class="sub" href="/task/">Todo</a></div>
                     <div class="parent"><i class="fas fa-address-book custom"></i><a class="sub" href="/users/update-form">Account</a></div>
                     <div class="parent"><i class="fas fa-sign-out-alt custom"></i><a class="sub" href="/users/log-out">LogOut</a></div>
                 </div>

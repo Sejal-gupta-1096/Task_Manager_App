@@ -15,7 +15,7 @@ module.exports.home = function(request , response){
     if(request.isAuthenticated()){
         return response.redirect("back");
     }
-    return response.render("home");
+    return response.render("home" , {layout : "layout"});
 }
 
 const Tasks = require("../models/tasks");
