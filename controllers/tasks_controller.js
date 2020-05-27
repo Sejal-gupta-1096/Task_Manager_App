@@ -3,16 +3,22 @@ const Tasks = require("../models/tasks");
 
 module.exports.showTasksPage = async function(request , response){
 
-    let user = await Users.findById(request.user._id);
+    try{
+
+        let user = await Users.findById(request.user._id);
     
-    await user.populate("tasks").execPopulate();
-
-    console.log(user);
-
-    response.render("_view_tasks" , {
-        layout: "layoutsA",
-        user : user,
-    });
+        await user.populate("tasks").execPopulate();
+    
+        console.log(user);
+    
+        response.render("_view_tasks" , {
+            layout: "layoutsA",
+            user : user,
+        });
+    }catch(error){
+        console.log(error);
+    }
+   
 }
 
 module.exports.addTaskForm = async function(request , response){

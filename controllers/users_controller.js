@@ -12,6 +12,7 @@ module.exports.signUp = function(request , response){
 }
 
 module.exports.signIn = function(request , response){
+    console.log(request.isAuthenticated())
     if(request.isAuthenticated()){
         return response.redirect("back");
     }

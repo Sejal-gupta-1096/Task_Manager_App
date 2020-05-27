@@ -17,7 +17,11 @@
             <div id="dashboard">
                 <div id="details">
                     <div id="img-container">
-                       <img src="<%= user.avtar %>" style="width:90%">
+                        <% if(user.avtar) {%>
+                        <img id="img" class="rounded-circle" src="<%=user.avtar%>" style="width:inherit;height: inherit;">
+                        <% }else{%>
+                            <img id="img" class="rounded-circle" src="/images/user_default_img.png" style="width:inherit;height: inherit;">
+                       <% } %>
                     </div>
                     <p id="name"><%= user.name %></p>
                 </div>
